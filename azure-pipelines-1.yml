@@ -24,11 +24,13 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
     
-- task: SonarQubeAnalyze@4
+
 - task: SonarQubePrepare@4
   inputs:
     scannerMode: 'Other'
     SonarQube: 'SonarQubeTest'
+
+- task: SonarQubeAnalyze@4
 - task: SonarQubePublish@4
   inputs:
     pollingTimeoutSec: '300'
