@@ -1,4 +1,7 @@
 # Maven
+- task: SonarQubePrepare@4
+  inputs:
+    scannerMode: 'Other'
 
 
 # Build your Java project and run tests with Apache Maven.
@@ -23,9 +26,6 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
     
-- task: SonarQubePrepare@4
-  inputs:
-    scannerMode: 'Other'
 - task: SonarQubeAnalyze@4
 - task: SonarQubePublish@4
   inputs:
