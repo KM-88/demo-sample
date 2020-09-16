@@ -8,7 +8,8 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  SelfHostedDemo
+#  vmImage: 'ubuntu-latest'
 
 steps:
 - task: Maven@3
