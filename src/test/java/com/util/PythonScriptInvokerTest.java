@@ -27,6 +27,6 @@ public class PythonScriptInvokerTest {
 		String s = currentRelativePath.toAbsolutePath().toString();
 		String retrunMessage = scriptInvoker.invoke("python", s, "");
 		Assertions.assertNotNull(retrunMessage);
-		Assertions.assertTrue(retrunMessage.isBlank());
+		Assertions.assertTrue(retrunMessage.isEmpty());
 	}
 }
