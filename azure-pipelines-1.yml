@@ -13,10 +13,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: SonarQubePrepare@4
-  inputs:
-    scannerMode: 'Other'
-    SonarQube: 'SonarQubeTest'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -27,13 +23,6 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    sonarQubeRunAnalysis: true 
-    sqMavenPluginVersionChoice: 'latest'
     checkStyleRunAnalysis: true # Optional
     pmdRunAnalysis: true # Optional
     findBugsRunAnalysis: true # Optional
-    
-- task: SonarQubeAnalyze@4
-- task: SonarQubePublish@4
-  inputs:
-    pollingTimeoutSec: '300'
