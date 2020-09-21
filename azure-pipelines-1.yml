@@ -23,10 +23,10 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-    checkStyleRunAnalysis: true # Optional
-    pmdRunAnalysis: true # Optional
-    findBugsRunAnalysis: true # Optional
+    goals: 'test'
+    checkStyleRunAnalysis: false # Optional
+    pmdRunAnalysis: false # Optional
+    findBugsRunAnalysis: false # Optional
 
 - task: PublishBuildArtifacts@1
   inputs:
