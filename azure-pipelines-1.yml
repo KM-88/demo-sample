@@ -25,9 +25,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'surefire-report:report'
-    checkStyleRunAnalysis: false # Optional
-    pmdRunAnalysis: false # Optional
-    findBugsRunAnalysis: false # Optional
+    checkStyleRunAnalysis: true # Optional
+    pmdRunAnalysis: true # Optional
+    findBugsRunAnalysis: true # Optional
 - script : 'echo "Run Again"'
 - task: PublishTestResults@2
   inputs:
