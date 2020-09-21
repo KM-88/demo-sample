@@ -28,13 +28,8 @@ steps:
     checkStyleRunAnalysis: false # Optional
     pmdRunAnalysis: false # Optional
     findBugsRunAnalysis: false # Optional
-
+- script : 'echo "Run Again"'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
