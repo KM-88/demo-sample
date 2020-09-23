@@ -24,11 +24,14 @@
 	</target>
 
 	<path id="classpath.base" >
+		<fileset dir="${basedir}/lib/common/"/>
+		<!--
 		<pathelement location="lib/log4j-1.2.14.jar"/>
 		<pathelement location="lib/hibernate-core-5.3.7.Final.jar" />
 		<pathelement location="lin/hibernate-commons-annotations-5.0.4.Final.jar" />
 		<pathelement location="lib/mysql-connector-java-8.0.13.jar" />
 		<pathelement location="lib/javax.persistence-api-2.2.jar" />
+		-->
 	</path>
 	<!--
 	<path id="classpath.test">
